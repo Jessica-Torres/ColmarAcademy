@@ -1,4 +1,25 @@
-/* Just to try it out */
-header span {
-  font-weight: bold;
+/* Universal Styles -----------------------*/
+
+
+/* Header Section -------------------------*/
+
+header {
+    display: flex;
+    border-bottom: 1px solid black;
+    align-items: center;
+    height: 64px;
+}
+
+.logo img {
+  padding-left: 24px;
+}
+
+nav {
+  flex-grow: 1;
+  text-align: right;
+}
+
+nav li {
+  display: inline-flex;
+  padding-right: 16px;
 }
