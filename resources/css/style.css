@@ -1,51 +1,115 @@
 /* Universal Styles -----------------------*/
-
+html {
+  font-size: 16px;
+}
 
 /* Header Section -------------------------*/
 
+.flexcontainer {
+  display: flex;
+}
+
 header {
-    display: flex;
     border-bottom: 1px solid black;
     align-items: center;
-    height: 64px;
+    height: 4rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
 }
 
-.logo img {
-  padding-left: 24px;
+.logo {
+  align-items: center;
+  flex-grow: 1;
 }
+
+strong {
+  font-weight: bold;
+}
+
+/* Nvaigation in header -------------------------*/
 
 nav {
-  flex-grow: 1;
-  text-align: right;
+  display: flex;
+  justify-content: space-around;
 }
 
 nav li {
   display: inline-flex;
-  padding-right: 16px;
+  margin-left: 0.75rem;
 }
 
 /* Banner Section -------------------------*/
 
 .banner {
   background-color: lightgray;
-  display: flex;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
-.banner img {
-  padding: 32px 40px 32px 24px;
+.left {
+  justify-content: center;
+  flex-direction: column;
   width: 60%;
 }
 
-.banner .learn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
+.image {
+  margin: 2rem 1.5rem 2rem 0rem;
+  max-width: 100%;
 }
 
-.button-start {
-  padding: 8px 0;
-  margin: auto;
-  background-color: rgb(80, 80, 80);
+.banner img {
+  width: 100%;
+}
+
+.right {
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+  flex-grow: 1;
+  width: 423px;
+  text-align: center;
+}
+
+.buttonstart {
+  padding: 0.5rem;
+  margin-top: 2rem;
+  background-color: red;
   color: white;
+  text-align: center;
+}
+
+/* Information Section ------------------------------*/
+
+.information {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.information .left {
+  margin-top: 2rem;
+}
+
+.information .left .image {
+  margin: 0 1.5rem 2rem 0;
+  max-width: 100%;
+}
+
+.information img {
+  width: 100%;
+}
+
+.information .right .section {
+  border-bottom: 1px solid red;
+}
+
+.information .right .image {
+  width: 35%;
+  justify-content: flex-start;
+}
+
+.information .right .info {
+  flex-grow: 1;
+  justify-content: center;
+  max-width: 65%;
+  flex-direction: column;
 }
