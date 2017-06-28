@@ -65,23 +65,35 @@
 
 
 
-/* Universal Styles -----------------------*/
+/* Universal Styles -------------------------------------------*/
 html {
   font-size: 16px;
   font-family: "source sans pro", "sans-serif";
 }
 
 .container {
-  max-width: 1260px;
   margin: 0 auto;
+  width: 100%;
+}
+
+img {
+  vertical-align: middle;
+}
+
+strong {
+  font-weight: bold;
+  color: rgb(0, 0, 102);
 }
 
 h1 {
   font-family: "roboto";
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   color: rgb(0 ,0, 102);
+  margin-bottom: 2rem;
+  line-height: 1.2;
 }
+
 h2 {
   font-family: "roboto";
   font-size: 2.2rem;
@@ -93,231 +105,242 @@ h3 {
   font-size: 1.5rem;
   font-weight: bold;
   color: rgb(0, 0, 102);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
 }
 
 p {
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
-strong {
-  font-weight: bold;
-  color: rgb(0, 0, 102);
-}
-
-@media only screen and (max-width: 480px) {
-  body {
-    width: 100%;
-  }
-}
-/* Header Section ---------------------------------------------*/
-
-.flexcontainer {
+.flex {
   display: flex;
 }
 
-header {
-    border-bottom: 1px solid rgb(0, 0, 102);
-    align-items: center;
-    height: 4rem;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+.left {
+  width: 60%;
 }
 
-.logo {
+.right {
+  width: 40%;
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .desktop {
+    display: none;
+  }
+  .left, .right {
+    width: 100%;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* HEADER SECTION ---------------------------------------------*/
+
+header {
+  display: flex;
+  height: 4rem;
+  padding: 0 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+header .logo {
   align-items: center;
   flex-grow: 1;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+}
+
+.logo .icon {
+  height: 2rem;
+  margin-right: 0.5rem;
 }
 
 .logotxt {
   font-size: 1.5rem;
 }
 
+.mobile {
+  display: none;
+  width: 100%;
+}
 
-/* Nvaigation in header -------------------------*/
+/* NAVIGATION -----------------------------------------------------*/
 
 nav {
   display: flex;
   justify-content: space-around;
+  margin-right: 1rem;
+  align-items: flex-end;
 }
 
 nav li {
   display: inline-flex;
   margin-left: 1rem;
-  font-size: 1.2rem;
 }
 
-.nav-mobile {
-  display: none;
+nav a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  color: rgb(0, 0, 102);
+  font-weight: bold;
+}
+
+nav .icon {
+  height: 2rem;
 }
 
 @media only screen and (max-width: 480px) {
-  .logo {
-    display: none;
-  }
-  .nav-desktop {
-    display: none;
-  }
-  .nav-mobile {
+  header .mobile {
     display: flex;
     justify-content: space-between;
-    margin: auto;
-  }
-  .nav-mobile li {
-    padding: 1rem;
   }
 }
 
-/* Banner Section ----------------------------------------------*/
+/* BANNER ---------------------------------------------------------*/
 
 .banner {
+  display: flex;
   background-color: rgb(219, 240, 255);
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   border-bottom: 1px solid rgb(0, 0, 102);
 }
 
-.left {
-  flex-direction: column;
-  width: 60%;
+.banner-image {
+  padding: 2rem 1.5rem 2rem 0;
 }
 
-.image {
-  margin: 2rem 1.5rem 2rem 0rem;
+.banner-image img {
   max-width: 100%;
 }
 
-.banner img {
-  width: 100%;
+.banner .right {
+  display: flex;
+  align-items: center;
 }
 
-.right {
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 1rem;
-  flex-grow: 1;
-  width: 423px;
-  text-align: center;
-}
-
-.banner h1 {
-  line-height: 1.1;
+.banner .text {
+  padding: 2rem 1.5rem;
 }
 
 .banner h3 {
-  font-weight: 400;
+  font-weight: normal;
   color: black;
 }
 
-.buttonstart {
-  padding: 0.5rem;
-  margin-top: 2rem;
+.button {
+  margin: 1.5rem 0;
+  padding: 1rem 2rem;
   background-color: rgb(105,105,105);
   color: white;
   text-align: center;
   font-size: 1.2rem;
 }
 
-.buttonstart:hover {
+.button:hover {
   font-weight: bold;
 }
 
 @media only screen and (max-width: 480px) {
   .banner {
     flex-direction: column;
+  }
+  .banner-image {
     padding: 0;
   }
-  .left {
-    width: 100%;
+  .banner .text {
+    padding: 2rem 1rem;
   }
-  .banner .image {
-    width: 100%;
-  }
-  .right {
-    flex-grow: 1;
-    width: 100%;
-    text-align: left;
-    padding-right: 1rem;
+  .banner .right {
+    padding-right: 1.5rem;
   }
   .banner h1 {
-    font-size: 2.5rem;
-    line-height: 1;
-    padding-bottom: 2rem;
+    font-size: 2rem;
   }
-  .buttonstart {
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-    margin-top: 1.5rem;
+  .banner h3 {
+    font-size: 1.2rem;
+  }
+  .banner .text .button {
+    width: 80%;
+    padding: 1rem;
   }
 }
 
-/* Information Section ------------------------------*/
+/* INFORMATION SECTION ---------------------------------------------*/
 
-.information {
-  padding-left: 1.5rem;
-  padding-bottom: 2rem;
+.information .main {
+  padding: 2rem 1.5rem;
 }
 
-.information .mobile {
-  display: none;
+.information .main .image-container {
+  margin-bottom: 2rem;
 }
 
-.information .left {
-  margin-top: 2rem;
-}
-
-.information .left .image {
-  margin: 0 1.5rem 2rem 0;
+.information .main img {
   max-width: 100%;
 }
 
-.information img {
-  width: 100%;
+.information h2 {
+  margin-bottom: 1.5rem;
 }
-
-.information .left h2 {
-  padding-bottom: 1.5rem;
-}
-
-.information .left p {
-  padding-bottom: 1.5rem;
-}
-
-.information .right .block {
-  border-bottom: 1px solid rgb(0, 0, 102);
-  text-align: left;
-}
-
-.information .right .block:last-child {
-  border-bottom: none;
-  background-color: rgb(224, 224, 224);
-  margin-right: 0;
-}
-
-.information .right .image {
-  width: 35%;
-  justify-content: flex-start;
-}
-
-.information .right .info {
-  flex-grow: 1;
-  justify-content: center;
-  max-width: 65%;
-  flex-direction: column;
-}
-
-.information .right h3 {
-  padding-bottom: .5rem;
-}
-
-.information .right p {
-  padding-bottom: .5rem;
+.information p {
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
 #eman {
   font-family: sans-serif;
 }
+
+.information .flex {
+  flex-direction: column;
+}
+
+.information .block {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-bottom: 1px solid rgb(0, 0, 102);
+}
+
+.information .block:first-child {
+  padding-top: 2rem;
+}
+
+.information .block:last-child {
+  border-bottom: none;
+  background-color: rgb(224, 224, 224);
+  margin-right: 0;
+}
+
+.information .right .image-container {
+  margin-right: 1rem;
+  width: 35%;
+}
+
+.information .right .image-container img {
+  max-width: 100%;
+}
+
+.lecture img {
+  max-width: 100%;
+}
+
 .read-more {
   color: rgb(0, 0, 204);
 }
@@ -327,221 +350,162 @@ nav li {
 }
 
 @media only screen and (max-width: 480px) {
-  .information {
-    padding: 0;
+  .information .block:first-child {
+    padding-top: 1rem;
   }
-  .information .left {
-    display: none;
+  .information .block {
+    padding: 0.5rem 1rem 0.5rem 0;
+    flex-direction: column;
+    border-bottom: none;
   }
-  .information .desktop {
-    display: none;
+  .information .right .image-container {
+    margin: 0 0 1rem 0;
+    width: 100%;
   }
   .information .mobile {
     display: flex;
-  }
-  .information .right .block {
+    width: 100%;
     flex-direction: column;
-    border-bottom: none;
-    text-align: left;
   }
-  .information .right .image {
-    width: 100%;
-    height: auto;
-  }
-  .information .right .info {
-    justify-content: center;
-    width: 100%;
-    padding-left: 1rem;
-  }
-  .information .right .block:last-child {
+  .information .block:last-child {
     background-color: white;
-    margin-bottom: 1rem;
+    padding-bottom: 2rem;
   }
 }
 
-/* Courses Section ----------------------------------------------------*/
+/* COURSES --------------------------------------------------------*/
 
 .courses {
   background-color: rgb(219, 240, 255);
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  flex-direction: column;
+  padding-bottom: 1rem;
+  border-top: 1px solid rgb(0, 0, 102)
 }
 
 .courses h2 {
-  text-align: center;
   padding: 2rem 0;
+  margin: 0;
+  text-align: center;
 }
 
-.courses h3 {
-  padding-bottom: .5rem;
-  color: white;
-}
-
-.courses p {
-  font-size: 1.1rem;
-  padding-bottom: .5rem;
-  color: white;
-}
-
-.courses .row {
-  padding: 0 5rem 2rem 5rem;
-}
-
-.courses .blocks {
-  justify-content: center;
-  width: 100%;
+.courses .block-container {
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .courses .block {
-  margin: 1rem;
-  max-width: 30%;
-  flex-direction: column;
-}
-
-.courses .image {
-  width: 100%;
-  margin: 0;
-}
-
-.courses .info {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  padding: 1rem;
-  height: 8rem;
-  background-color: rgba(0, 0, 102, 0.8);
+  max-width: 25%;
+  padding: 0 1rem 1rem 1rem;
 }
 
 .courses img {
-  width: 100%;
-  align-items: center;
+  max-width: 100%;
 }
 
-@media only screen and (max-width: 480px) {
-  .courses {
-    background-color: white;
-    padding: 0;
-    flex-direction: column;
-  }
-  .courses h2 {
-    text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-  }
-  .courses h3 {
-    padding: 0 auto;
-    margin: 0 auto;
-    color: white;
-  }
-  .courses p {
-    display: none;
-  }
-  .courses .row {
-    padding: 0;
-    margin: 1rem;
-  }
-  .courses .blocks {
-    flex-wrap: nowrap;
+.courses .info {
+  height: 11rem;
+  background-color: rgba(0, 0, 102, 0.8);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.courses h3 {
+  color: white
+}
+
+.courses p {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 480px){
+  .courses .block-container {
     flex-direction: column;
   }
   .courses .block {
     max-width: 100%;
-    margin-bottom: 0.5rem;
   }
-  .courses .image {
+  .courses p {
     display: none;
   }
   .courses .info {
-    text-align: left;
-    width: 100%;
-    padding: 1rem;
-    margin: 0 auto;
     height: auto;
   }
-
+  .courses h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+  }
 }
 
-/* Thesis Section --------------------------------------*/
-
-.thesis {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-bottom: 2rem;
-  flex-direction: column;
-}
+/* THESIS SECTION --------------------------------------------------*/
 
 .thesis h2 {
+  padding: 2rem 0;
+  margin: 0;
   text-align: center;
-  padding-top: 2rem;
 }
 
-.thesis .left .video {
-  margin: 2rem 1rem 1.5rem 0;
+.thesis .main {
+  padding: 0 0.5rem 1rem 1.5rem;
+}
+
+.thesis .main .video-container {
+  margin-bottom: 1.5rem;
+}
+
+.thesis .main video {
   max-width: 100%;
 }
 
-.thesis video {
-  width: 100%;
-  border: 1px solid rgb(0, 0, 102);
+.thesis .block:first-child {
+  background-color: rgb(219, 240, 255);
 }
 
-.thesis .left .info {
-  flex-direction: column;
+.thesis .block {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
 }
 
-.thesis .left h3 {
-  padding-bottom: 1.5rem;
-}
-
-.thesis .right {
-  margin-top: 2rem;
-  margin-left: 1rem;
-}
-
-.thesis .right .block {
-  border-bottom: 1px solid rgb(0, 0, 102);
-  text-align: left;
-}
-
-.thesis .right .block:last-child {
-  border-bottom: none;
-}
-
-.thesis .right .image {
+.thesis .image-container {
+  margin-right: 1rem;
   width: 35%;
-  justify-content: flex-start;
 }
 
 .thesis img {
-  padding: 1rem;
-  width: 100%;
+  max-width: 100%;
 }
 
-.thesis h3 {
-  padding-bottom: 0.5rem;
+.thesis .info {
+  width: 65%;
 }
 
-.thesis .right .info {
-  flex-grow: 1;
-  justify-content: center;
-  max-width: 65%;
-  flex-direction: column;
-  padding-left: 1rem;
+@media only screen and (max-width: 480px) {
+  .thesis .main {
+    padding: 2rem 0;
+  }
 }
 
-/* Footer Section -------------------------------------------------*/
+/* FOOTER ---------------------------------------------------------*/
 
 footer {
+  padding: 0 1.5rem;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: rgb(219, 240, 255);
   height: 4rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  justify-content: space-between;
 }
 
-footer .disclosure span {
+footer .disclosure {
   margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .disclosure {
+    display: none;
+  }
 }
