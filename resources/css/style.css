@@ -68,16 +68,46 @@
 /* Universal Styles -----------------------*/
 html {
   font-size: 16px;
+  font-family: "source sans pro", "sans-serif";
 }
 
-/* Header Section -------------------------*/
+h1 {
+  font-family: "roboto";
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgb(0 ,0, 102);
+}
+h2 {
+  font-family: "roboto";
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: rgb(0, 0, 102);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(0, 0, 102);
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+strong {
+  font-weight: bold;
+  color: rgb(0, 0, 102);
+}
+
+/* Header Section ---------------------------------------------*/
 
 .flexcontainer {
   display: flex;
 }
 
 header {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(0, 0, 102);
     align-items: center;
     height: 4rem;
     padding-right: 1.5rem;
@@ -89,8 +119,8 @@ header {
   flex-grow: 1;
 }
 
-strong {
-  font-weight: bold;
+.logotxt {
+  font-size: 1.5rem;
 }
 
 /* Nvaigation in header -------------------------*/
@@ -102,19 +132,20 @@ nav {
 
 nav li {
   display: inline-flex;
-  margin-left: 0.75rem;
+  margin-left: 1rem;
+  font-size: 1.2rem;
 }
 
-/* Banner Section -------------------------*/
+/* Banner Section ----------------------------------------------*/
 
 .banner {
-  background-color: lightgray;
+  background-color: rgb(219, 240, 255);
   padding-right: 1.5rem;
   padding-left: 1.5rem;
+  border-bottom: 1px solid rgb(0, 0, 102);
 }
 
 .left {
-  justify-content: center;
   flex-direction: column;
   width: 60%;
 }
@@ -137,19 +168,33 @@ nav li {
   text-align: center;
 }
 
+.banner h1 {
+  line-height: 1.1;
+}
+
+.banner h3 {
+  font-weight: 400;
+  color: black;
+}
+
 .buttonstart {
   padding: 0.5rem;
   margin-top: 2rem;
-  background-color: red;
+  background-color: rgb(105,105,105);
   color: white;
   text-align: center;
+  font-size: 1.2rem;
+}
+
+.buttonstart:hover {
+  font-weight: bold;
 }
 
 /* Information Section ------------------------------*/
 
 .information {
-  padding-right: 1.5rem;
   padding-left: 1.5rem;
+  padding-bottom: 2rem;
 }
 
 .information .left {
@@ -165,8 +210,23 @@ nav li {
   width: 100%;
 }
 
+.information .left h2 {
+  padding-bottom: 1.5rem;
+}
+
+.information .left p {
+  padding-bottom: 1.5rem;
+}
+
 .information .right .block {
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid rgb(0, 0, 102);
+  text-align: left;
+}
+
+.information .right .block:last-child {
+  border-bottom: none;
+  background-color: rgb(224, 224, 224);
+  margin-right: 0;
 }
 
 .information .right .image {
@@ -181,10 +241,29 @@ nav li {
   flex-direction: column;
 }
 
-/* Courses Section -----------------------------------*/
+.information .right h3 {
+  padding-bottom: .5rem;
+}
+
+.information .right p {
+  padding-bottom: .5rem;
+}
+
+#eman {
+  font-family: sans-serif;
+}
+.read-more {
+  color: rgb(0, 0, 204);
+}
+.read-more:hover {
+  color: rgb(0, 0, 102);
+  font-weight: bold;
+}
+
+/* Courses Section ----------------------------------------------------*/
 
 .courses {
-  background-color: lightgray;
+  background-color: rgb(219, 240, 255);
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   flex-direction: column;
@@ -193,6 +272,17 @@ nav li {
 .courses h2 {
   text-align: center;
   padding: 2rem 0;
+}
+
+.courses h3 {
+  padding-bottom: .5rem;
+  color: white;
+}
+
+.courses p {
+  font-size: 1.1rem;
+  padding-bottom: .5rem;
+  color: white;
 }
 
 .courses .row {
@@ -205,7 +295,7 @@ nav li {
   flex-wrap: wrap;
 }
 
-.courses .flexcontainer .block {
+.courses .block {
   margin: 1rem;
   max-width: 30%;
   flex-direction: column;
@@ -221,7 +311,8 @@ nav li {
   flex-direction: column;
   background-color: white;
   padding: 1rem;
-  height: 12rem;
+  height: 8rem;
+  background-color: rgba(0, 0, 102, 0.8);
 }
 
 .courses img {
@@ -249,6 +340,7 @@ nav li {
 
 .thesis video {
   width: 100%;
+  border: 1px solid rgb(0, 0, 102);
 }
 
 .thesis .left .info {
@@ -258,12 +350,15 @@ nav li {
 .thesis .right {
   margin-top: 2rem;
   margin-left: 1rem;
-  border-left: 1px solid red;
 }
 
 .thesis .right .block {
-  padding: 0 0 2rem 0;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid rgb(0, 0, 102);
+  text-align: left;
+}
+
+.thesis .right .block:last-child {
+  border-bottom: none;
 }
 
 .thesis .right .image {
@@ -276,12 +371,19 @@ nav li {
   width: 100%;
 }
 
+.thesis h3 {
+  padding-bottom: 0.5rem;
+}
+
 .thesis .right .info {
   flex-grow: 1;
   justify-content: center;
   max-width: 65%;
   flex-direction: column;
+  padding-left: 1rem;
 }
+
+/* Footer Section -------------------------------------------------*/
 
 footer {
   align-items: center;
