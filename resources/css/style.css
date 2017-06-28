@@ -98,7 +98,7 @@ nav li {
   width: 100%;
 }
 
-.information .right .section {
+.information .right .block {
   border-bottom: 1px solid red;
 }
 
@@ -160,4 +160,71 @@ nav li {
 .courses img {
   width: 100%;
   align-items: center;
+}
+
+/* Thesis Section --------------------------------------*/
+
+.thesis {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  flex-direction: column;
+}
+
+.thesis h2 {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.thesis .left .video {
+  margin: 2rem 1rem 1.5rem 0;
+  max-width: 100%;
+}
+
+.thesis video {
+  width: 100%;
+}
+
+.thesis .left .info {
+  flex-direction: column;
+}
+
+.thesis .right {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  border-left: 1px solid red;
+}
+
+.thesis .right .block {
+  padding: 0 0 2rem 0;
+  border-bottom: 1px solid red;
+}
+
+.thesis .right .image {
+  width: 35%;
+  justify-content: flex-start;
+}
+
+.thesis img {
+  padding: 1rem;
+  width: 100%;
+}
+
+.thesis .right .info {
+  flex-grow: 1;
+  justify-content: center;
+  max-width: 65%;
+  flex-direction: column;
+}
+
+footer {
+  align-items: center;
+  background-color: lightgray;
+  height: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  justify-content: space-between;
+}
+
+footer .disclosure span {
+  margin-left: 0.5rem;
 }
