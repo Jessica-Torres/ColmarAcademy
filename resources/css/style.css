@@ -113,3 +113,51 @@ nav li {
   max-width: 65%;
   flex-direction: column;
 }
+
+/* Courses Section -----------------------------------*/
+
+.courses {
+  background-color: lightgray;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  flex-direction: column;
+}
+
+.courses h2 {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.courses .row {
+  padding: 0 5rem 2rem 5rem;
+}
+
+.courses .blocks {
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.courses .flexcontainer .block {
+  margin: 1rem;
+  max-width: 30%;
+  flex-direction: column;
+}
+
+.courses .image {
+  width: 100%;
+  margin: 0;
+}
+
+.courses .info {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  height: 12rem;
+}
+
+.courses img {
+  width: 100%;
+  align-items: center;
+}
